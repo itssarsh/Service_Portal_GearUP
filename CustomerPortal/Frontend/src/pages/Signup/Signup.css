@@ -1,0 +1,61 @@
+.signup-page {
+  --auth-accent: var(--color-accent);
+  --auth-accent-strong: var(--color-accent-strong);
+  --auth-glow-primary: rgba(44, 155, 146, 0.12);
+  --auth-glow-secondary: rgba(74, 121, 178, 0.12);
+}
+
+.signup-page .auth-shell__layout {
+  grid-template-columns: 1fr;
+  align-items: start;
+  gap: 22px;
+  width: min(1220px, 100%);
+  min-height: auto;
+  padding-top: 10px;
+}
+
+.signup-page .auth-shell__hero {
+  max-width: none;
+  width: 100%;
+  padding: 24px 28px;
+}
+
+.signup-page .auth-shell__hero h1 {
+  max-width: 760px;
+}
+
+.signup-page .auth-shell__hero p {
+  max-width: 820px;
+}
+
+.signup-page .auth-card {
+  width: 100%;
+  justify-self: stretch;
+}
+
+.signup-form-section {
+  margin: 4px 0 6px;
+}
+
+.signup-form-section__label {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(44, 155, 146, 0.08);
+  color: var(--color-accent-strong);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 720px) {
+  .signup-page .auth-shell__layout {
+    gap: 18px;
+  }
+
+  .signup-page .auth-shell__hero {
+    padding: 22px 20px;
+  }
+}

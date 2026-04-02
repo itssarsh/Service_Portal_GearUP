@@ -1,0 +1,291 @@
+.notifications-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 32px 24px 40px;
+  background:
+    radial-gradient(circle at top left, rgba(199, 122, 52, 0.08), transparent 24%),
+    radial-gradient(circle at right, rgba(68, 106, 146, 0.1), transparent 30%),
+    linear-gradient(180deg, #f3f6f9 0%, #edf2f8 56%, #f9fbfd 100%);
+}
+
+.notifications-page__backdrop {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(20, 48, 74, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 48, 74, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.notifications-shell {
+  position: relative;
+  z-index: 1;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 24px;
+}
+
+.notifications-hero,
+.notifications-board,
+.notifications-card,
+.notifications-empty {
+  border-radius: 30px;
+  border: 1px solid rgba(19, 48, 74, 0.08);
+  box-shadow: 0 20px 46px rgba(24, 50, 76, 0.08);
+}
+
+.notifications-hero {
+  padding: 28px;
+  background:
+    radial-gradient(circle at top right, rgba(255, 224, 196, 0.38), transparent 26%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(245, 249, 253, 0.9));
+}
+
+.notifications-hero__top,
+.notifications-hero__content,
+.notifications-board__header,
+.notifications-card__top,
+.notifications-card__footer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.notifications-hero__back,
+.notifications-board__button,
+.notifications-card__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.notifications-hero__back {
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--color-line);
+  color: var(--color-ink-900);
+}
+
+.notifications-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: var(--color-accent-soft);
+  color: var(--color-accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.notifications-hero__content {
+  margin-top: 20px;
+}
+
+.notifications-hero__eyebrow,
+.notifications-board__eyebrow,
+.notifications-card__eyebrow {
+  margin: 0 0 10px;
+  color: var(--color-accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.notifications-hero h1,
+.notifications-board h2,
+.notifications-card h3 {
+  margin: 0;
+  color: var(--color-ink-900);
+  letter-spacing: -0.04em;
+}
+
+.notifications-hero h1 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 1.02;
+}
+
+.notifications-hero p,
+.notifications-card__message,
+.notifications-empty p {
+  color: var(--color-ink-600);
+  line-height: 1.7;
+}
+
+.notifications-hero p {
+  max-width: 620px;
+  margin: 12px 0 0;
+}
+
+.notifications-hero__stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  min-width: 300px;
+}
+
+.notifications-stat {
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: rgba(245, 248, 252, 0.92);
+  border: 1px solid rgba(19, 48, 74, 0.08);
+}
+
+.notifications-stat span,
+.notifications-stat strong,
+.notifications-card__vehicle span,
+.notifications-card__vehicle strong {
+  display: block;
+}
+
+.notifications-stat span,
+.notifications-card__vehicle span,
+.notifications-card__time {
+  color: var(--color-ink-600);
+  font-size: 0.84rem;
+}
+
+.notifications-stat strong {
+  margin-top: 8px;
+  color: var(--color-ink-900);
+  font-size: 1.55rem;
+}
+
+.notifications-board {
+  padding: 28px;
+  background:
+    radial-gradient(circle at top right, rgba(220, 233, 248, 0.5), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(246, 250, 255, 0.9));
+}
+
+.notifications-board__header h2 {
+  margin-top: 8px;
+  font-size: 2rem;
+}
+
+.notifications-board__button {
+  border: 1px solid var(--color-line);
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--color-ink-900);
+  cursor: pointer;
+}
+
+.notifications-board__button:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+.notifications-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.notifications-card {
+  padding: 22px;
+  background:
+    radial-gradient(circle at top right, rgba(229, 238, 248, 0.46), transparent 24%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 253, 0.94));
+}
+
+.notifications-card--unread {
+  border-color: rgba(199, 122, 52, 0.3);
+}
+
+.notifications-card__message {
+  margin: 14px 0 18px;
+}
+
+.notifications-card__vehicle strong {
+  margin-top: 6px;
+  color: var(--color-ink-900);
+  font-size: 1rem;
+}
+
+.notifications-card__action {
+  background: rgba(18, 36, 54, 0.08);
+  color: var(--color-ink-900);
+}
+
+.notifications-empty {
+  padding: 42px 28px;
+  margin-top: 24px;
+  text-align: center;
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.12), transparent 28%),
+    linear-gradient(180deg, rgba(18, 38, 58, 0.96), rgba(43, 78, 114, 0.94));
+  color: #ffffff;
+}
+
+.notifications-empty__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.notifications-empty h3 {
+  margin: 16px 0 10px;
+  font-size: 1.6rem;
+  letter-spacing: -0.04em;
+}
+
+.notifications-empty p {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+@media (max-width: 900px) {
+  .notifications-hero__content,
+  .notifications-card__top,
+  .notifications-card__footer {
+    flex-direction: column;
+  }
+
+  .notifications-hero__stats {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .notifications-page {
+    padding: 22px 16px 32px;
+  }
+
+  .notifications-hero,
+  .notifications-board,
+  .notifications-card,
+  .notifications-empty {
+    border-radius: 24px;
+  }
+
+  .notifications-hero,
+  .notifications-board {
+    padding: 22px 18px;
+  }
+
+  .notifications-hero__top,
+  .notifications-board__header {
+    flex-direction: column;
+  }
+
+  .notifications-hero__stats {
+    grid-template-columns: 1fr;
+  }
+}

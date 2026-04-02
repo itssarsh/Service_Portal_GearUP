@@ -1,0 +1,49 @@
+.customer-alert-pill {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  max-width: min(360px, calc(100vw - 32px));
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(16, 33, 53, 0.96), rgba(35, 74, 112, 0.94));
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 20px 44px rgba(12, 28, 46, 0.24);
+}
+
+.customer-alert-pill:hover {
+  transform: translateY(-2px);
+}
+
+.customer-alert-pill__label {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.customer-alert-pill__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.16);
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .customer-alert-pill {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    max-width: none;
+  }
+}

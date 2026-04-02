@@ -1,0 +1,283 @@
+.mechanic-rating-page {
+  position: relative;
+  min-height: 100vh;
+  padding: clamp(24px, 4vw, 48px);
+  overflow: hidden;
+}
+
+.mechanic-rating-page__backdrop,
+.mechanic-rating-page__mesh {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.mechanic-rating-page__backdrop {
+  background:
+    radial-gradient(circle at 12% 14%, rgba(199, 122, 52, 0.16), transparent 24%),
+    radial-gradient(circle at 88% 18%, rgba(76, 117, 163, 0.11), transparent 24%),
+    linear-gradient(180deg, rgba(249, 250, 252, 0.84), rgba(240, 245, 251, 0.94));
+}
+
+.mechanic-rating-page__mesh {
+  opacity: 0.46;
+  background-image:
+    linear-gradient(rgba(19, 36, 58, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(19, 36, 58, 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.94), transparent 94%);
+}
+
+.mechanic-rating-container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 24px;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.mechanic-rating-hero,
+.mechanic-rating-card,
+.mechanic-rating-summary {
+  border: 1px solid rgba(19, 36, 58, 0.08);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(16px);
+}
+
+.mechanic-rating-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(260px, 0.7fr);
+  gap: 24px;
+  padding: clamp(24px, 4vw, 38px);
+}
+
+.mechanic-rating-hero__content {
+  display: grid;
+  gap: 16px;
+}
+
+.mechanic-rating-hero__eyebrow,
+.mechanic-rating-card__eyebrow {
+  margin: 0;
+  color: var(--color-accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.mechanic-rating-hero__content h1,
+.mechanic-rating-card__header h2 {
+  margin: 0;
+  color: var(--color-ink-950);
+  line-height: 1.08;
+}
+
+.mechanic-rating-hero__content h1 {
+  font-size: clamp(2.2rem, 4vw, 3.55rem);
+}
+
+.mechanic-rating-hero__description,
+.mechanic-rating-card__header span,
+.mechanic-rating-details__item span,
+.mechanic-rating-form__field span,
+.mechanic-rating-form__rating-label,
+.mechanic-rating-summary__label,
+.mechanic-rating-summary span {
+  color: var(--color-ink-600);
+}
+
+.mechanic-rating-hero__description {
+  margin: 0;
+  max-width: 58ch;
+  line-height: 1.75;
+}
+
+.mechanic-rating-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.mechanic-rating-hero__button,
+.mechanic-rating-form__submit,
+.mechanic-rating-form__star,
+.mechanic-rating-card__back {
+  border: none;
+  border-radius: 16px;
+}
+
+.mechanic-rating-hero__button,
+.mechanic-rating-form__submit,
+.mechanic-rating-card__back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 13px 20px;
+  font-weight: 800;
+  text-decoration: none;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--color-accent-strong), var(--color-accent));
+  box-shadow: 0 18px 36px rgba(142, 85, 31, 0.2);
+}
+
+.mechanic-rating-hero__button:hover,
+.mechanic-rating-form__submit:hover,
+.mechanic-rating-card__back:hover {
+  transform: translateY(-1px);
+}
+
+.mechanic-rating-summary {
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  padding: 24px;
+  color: #ffffff;
+  background: linear-gradient(165deg, rgba(15, 28, 43, 0.96), rgba(37, 57, 81, 0.94));
+  box-shadow: var(--shadow-medium);
+}
+
+.mechanic-rating-summary strong {
+  color: #ffffff;
+  font-size: 1.7rem;
+}
+
+.mechanic-rating-summary span,
+.mechanic-rating-summary__label {
+  color: rgba(255, 255, 255, 0.76);
+}
+
+.mechanic-rating-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+}
+
+.mechanic-rating-card {
+  padding: clamp(22px, 3vw, 30px);
+}
+
+.mechanic-rating-card--empty {
+  display: grid;
+  gap: 16px;
+  justify-items: start;
+}
+
+.mechanic-rating-card__header {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.mechanic-rating-details {
+  display: grid;
+  gap: 14px;
+}
+
+.mechanic-rating-details__item {
+  display: grid;
+  gap: 6px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: var(--color-surface-soft);
+  border: 1px solid rgba(19, 36, 58, 0.08);
+}
+
+.mechanic-rating-details__item strong,
+.mechanic-rating-form__rating-label strong {
+  color: var(--color-ink-900);
+}
+
+.mechanic-rating-form {
+  display: grid;
+  gap: 18px;
+}
+
+.mechanic-rating-form__stars {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.mechanic-rating-form__star {
+  width: 58px;
+  height: 58px;
+  font-size: 1.6rem;
+  color: rgba(19, 36, 58, 0.35);
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: inset 0 0 0 1px rgba(19, 36, 58, 0.1);
+  cursor: pointer;
+}
+
+.mechanic-rating-form__star--active,
+.mechanic-rating-form__star:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--color-accent-strong), var(--color-accent));
+  box-shadow: 0 14px 28px rgba(142, 85, 31, 0.22);
+  transform: translateY(-1px);
+}
+
+.mechanic-rating-form__field {
+  display: grid;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.mechanic-rating-form__field textarea {
+  width: 100%;
+  min-height: 132px;
+  padding: 14px 16px;
+  border: 1px solid var(--color-line);
+  border-radius: 18px;
+  background: rgba(248, 251, 255, 0.94);
+  color: var(--color-ink-900);
+  resize: vertical;
+}
+
+.mechanic-rating-form__field textarea:focus {
+  outline: none;
+  border-color: rgba(199, 122, 52, 0.42);
+  box-shadow: 0 0 0 4px rgba(199, 122, 52, 0.12);
+}
+
+.mechanic-rating-form__submit:disabled,
+.mechanic-rating-form__star:disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+@media (max-width: 960px) {
+  .mechanic-rating-hero,
+  .mechanic-rating-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .mechanic-rating-page {
+    padding: 20px;
+  }
+
+  .mechanic-rating-hero,
+  .mechanic-rating-card,
+  .mechanic-rating-summary {
+    border-radius: 22px;
+  }
+
+  .mechanic-rating-form__star {
+    width: 50px;
+    height: 50px;
+  }
+
+  .mechanic-rating-hero__button,
+  .mechanic-rating-form__submit,
+  .mechanic-rating-card__back {
+    width: 100%;
+  }
+}

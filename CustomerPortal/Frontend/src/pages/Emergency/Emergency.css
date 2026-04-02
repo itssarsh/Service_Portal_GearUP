@@ -1,0 +1,352 @@
+.emergency-page {
+  min-height: 100vh;
+  position: relative;
+  padding: 40px 32px 64px;
+  background:
+    radial-gradient(circle at 8% 10%, rgba(180, 87, 68, 0.08), transparent 24%),
+    radial-gradient(circle at 92% 12%, rgba(199, 122, 52, 0.08), transparent 24%),
+    linear-gradient(180deg, #f4f6f9 0%, #eef3f8 52%, #f8fbfd 100%);
+}
+
+.emergency-page__backdrop {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(42, 25, 17, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(42, 25, 17, 0.04) 1px, transparent 1px);
+  background-size: 32px 32px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.95), transparent 94%);
+}
+
+.emergency-shell {
+  position: relative;
+  z-index: 1;
+  width: min(1320px, 100%);
+  margin: 0 auto;
+}
+
+.emergency-hero,
+.emergency-form,
+.emergency-board,
+.emergency-empty-state {
+  border: 1px solid rgba(255, 255, 255, 0.74);
+  box-shadow: 0 28px 70px rgba(65, 36, 20, 0.1);
+  backdrop-filter: blur(18px);
+}
+
+.emergency-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) minmax(300px, 380px);
+  gap: 28px;
+  margin-bottom: 28px;
+  padding: 34px 36px;
+  border-radius: 34px;
+  background:
+    radial-gradient(circle at top right, rgba(222, 231, 243, 0.8), transparent 30%),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(244, 248, 252, 0.9));
+}
+
+.emergency-hero__eyebrow {
+  display: inline-flex;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(180, 87, 68, 0.12);
+  color: var(--color-danger);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.emergency-hero h1,
+.emergency-empty-state h1 {
+  margin: 16px 0 12px;
+  color: var(--color-ink-900);
+  font-size: clamp(2.4rem, 3.4vw, 4.1rem);
+  line-height: 0.96;
+  letter-spacing: -0.06em;
+}
+
+.emergency-hero__copy,
+.emergency-empty-state p {
+  max-width: 760px;
+  margin: 0;
+  color: var(--color-ink-600);
+  line-height: 1.75;
+}
+
+.emergency-hero__actions,
+.emergency-empty-state__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.emergency-hero__button,
+.emergency-hero__secondary,
+.emergency-form__submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 0 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(24, 36, 51, 0.12);
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.emergency-hero__button,
+.emergency-form__submit {
+  background: linear-gradient(135deg, #9d4233 0%, #c86e3d 100%);
+  color: #ffffff;
+  box-shadow: 0 18px 36px rgba(157, 66, 51, 0.2);
+}
+
+.emergency-hero__secondary {
+  background: rgba(255, 255, 255, 0.82);
+  color: var(--color-ink-900);
+}
+
+.emergency-hero__button:hover,
+.emergency-hero__secondary:hover,
+.emergency-form__submit:hover {
+  transform: translateY(-2px);
+}
+
+.emergency-hero__stats {
+  display: grid;
+  gap: 14px;
+}
+
+.emergency-stat {
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(24, 36, 51, 0.08);
+}
+
+.emergency-stat span,
+.emergency-stat strong,
+.emergency-card__meta span,
+.emergency-card__section span,
+.emergency-form__vehicle-note span,
+.emergency-form__vehicle-note strong {
+  display: block;
+}
+
+.emergency-stat span,
+.emergency-card__meta span,
+.emergency-card__section span,
+.emergency-form__vehicle-note span {
+  color: var(--color-ink-600);
+  font-size: 0.86rem;
+}
+
+.emergency-stat strong,
+.emergency-form__vehicle-note strong {
+  margin-top: 8px;
+  color: var(--color-ink-900);
+  font-size: 1.6rem;
+}
+
+.emergency-layout {
+  display: grid;
+  grid-template-columns: minmax(340px, 420px) minmax(0, 1fr);
+  gap: 24px;
+}
+
+.emergency-form,
+.emergency-board,
+.emergency-empty-state {
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.emergency-form,
+.emergency-board {
+  padding: 24px;
+}
+
+.emergency-empty-state {
+  padding: 36px;
+}
+
+.emergency-form__header h2,
+.emergency-board__header h2,
+.emergency-card__top h3 {
+  margin: 0;
+  color: var(--color-ink-900);
+}
+
+.emergency-form__header p,
+.emergency-board__header p,
+.emergency-card__top p,
+.emergency-card__section p {
+  margin: 8px 0 0;
+  color: var(--color-ink-600);
+  line-height: 1.6;
+}
+
+.emergency-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 20px;
+}
+
+.emergency-field {
+  display: grid;
+  gap: 8px;
+}
+
+.emergency-field--full {
+  grid-column: 1 / -1;
+}
+
+.emergency-field span {
+  color: var(--color-ink-900);
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.emergency-field input,
+.emergency-field select,
+.emergency-field textarea {
+  width: 100%;
+  padding: 14px 15px;
+  border: 1px solid rgba(24, 36, 51, 0.12);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-ink-900);
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.emergency-field textarea {
+  resize: vertical;
+}
+
+.emergency-field input:focus,
+.emergency-field select:focus,
+.emergency-field textarea:focus {
+  outline: none;
+  border-color: rgba(157, 66, 51, 0.38);
+  box-shadow: 0 0 0 4px rgba(157, 66, 51, 0.12);
+}
+
+.emergency-form__vehicle-note {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 248, 244, 0.92);
+  border: 1px solid rgba(200, 64, 44, 0.1);
+}
+
+.emergency-form__vehicle-note strong {
+  font-size: 1rem;
+}
+
+.emergency-form__submit {
+  width: 100%;
+  margin-top: 18px;
+}
+
+.emergency-board__list {
+  display: grid;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.emergency-card {
+  padding: 20px;
+  border: 1px solid rgba(24, 36, 51, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.84);
+}
+
+.emergency-card__top,
+.emergency-card__badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.emergency-card__badges {
+  justify-content: flex-end;
+}
+
+.emergency-card__badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(24, 36, 51, 0.08);
+  color: var(--color-ink-900);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.emergency-card__badge--priority {
+  background: rgba(180, 87, 68, 0.12);
+  color: var(--color-danger);
+}
+
+.emergency-card__meta {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.emergency-card__meta strong {
+  color: var(--color-ink-900);
+}
+
+.emergency-card__section {
+  margin-top: 16px;
+}
+
+.emergency-empty {
+  padding: 32px;
+  border: 1px dashed rgba(24, 36, 51, 0.14);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.58);
+  color: var(--color-ink-600);
+  text-align: center;
+}
+
+@media (max-width: 1080px) {
+  .emergency-hero,
+  .emergency-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .emergency-page {
+    padding: 22px 16px 36px;
+  }
+
+  .emergency-hero,
+  .emergency-form,
+  .emergency-board,
+  .emergency-empty-state {
+    padding: 20px;
+    border-radius: 24px;
+  }
+
+  .emergency-form__grid,
+  .emergency-card__meta {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-hero__button,
+  .emergency-hero__secondary {
+    width: 100%;
+  }
+}

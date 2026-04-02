@@ -1,0 +1,6 @@
+.login-page {
+  --auth-accent: #c67028;
+  --auth-accent-strong: #904c17;
+  --auth-glow-primary: rgba(214, 127, 52, 0.24);
+  --auth-glow-secondary: rgba(90, 125, 176, 0.18);
+}

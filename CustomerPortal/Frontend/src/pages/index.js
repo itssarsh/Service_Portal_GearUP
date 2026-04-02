@@ -1,0 +1,16 @@
+export { default as CustomerLoginPage } from "./Login/LoginPage";
+export { default as CustomerSignupPage } from "./Signup/SignupPage";
+export { default as CustomerForgotPasswordPage } from "./ForgotPassword/ForgotPasswordPage";
+export { default as CustomerResetPasswordPage } from "./ResetPassword/ResetPasswordPage";
+export { default as CustomerDashboardPage } from "./Dashboard/DashboardPage";
+export { default as CustomerProfilePage } from "./Profile/ProfilePage";
+export { default as CustomerAddVehiclePage } from "./AddVehicle/AddVehiclePage";
+export { default as CustomerAddServiceRecordPage } from "./AddService/AddServicePage";
+export { default as CustomerChangePasswordPage } from "./ChangePassword/ChangePasswordPage";
+export { default as CustomerEditProfilePage } from "./EditProfile/EditProfilePage";
+export { default as CustomerChatPage } from "./Chat/ChatPage";
+export { default as CustomerNotificationsPage } from "./Notifications/NotificationsPage";
+export { default as CustomerFeedbackPage } from "./Feedback/FeedbackPage";
+export { default as CustomerPortalFeedbackPage } from "./PortalFeedback/PortalFeedbackPage";
+export { default as CustomerComplaintPage } from "./Complaint/ComplaintPage";
+export { default as CustomerEmergencyPage } from "./Emergency/EmergencyPage";
