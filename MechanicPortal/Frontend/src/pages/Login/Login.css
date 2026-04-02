@@ -1,0 +1,25 @@
+@import "../../styles/AuthLayout.css";
+
+.login-page {
+  --auth-accent: #b4631f;
+  --auth-accent-strong: #8f4d18;
+  --auth-accent-soft: rgba(180, 99, 31, 0.12);
+  --auth-button-start: #8f4d18;
+  --auth-button-end: #d77922;
+  --auth-glow-left: rgba(210, 124, 38, 0.2);
+  --auth-glow-right: rgba(79, 104, 132, 0.18);
+}
+
+@media (max-width: 720px) {
+  .login-hero {
+    padding: 22px 20px;
+  }
+
+  .login-highlights {
+    grid-template-columns: 1fr;
+  }
+
+  .login-card {
+    max-width: none;
+  }
+}

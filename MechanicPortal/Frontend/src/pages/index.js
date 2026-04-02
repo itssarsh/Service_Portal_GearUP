@@ -1,0 +1,15 @@
+export { default as MechanicLoginPage } from "./Login/LoginPage";
+export { default as MechanicSignupPage } from "./SignUp/SignupPage";
+export { default as MechanicForgotPasswordPage } from "./ForgotPassword/ForgotPasswordPage";
+export { default as MechanicResetPasswordPage } from "./ResetPassword/ResetPasswordPage";
+export { default as MechanicChangePasswordPage } from "./ChangePassword/ChangePasswordPage";
+export { default as MechanicDashboardPage } from "./Dashboard/DashboardPage";
+export { default as MechanicBillingPage } from "./Billing/BillingPage";
+export { default as MechanicChatPage } from "./Chat/ChatPage";
+export { default as MechanicEmergencyPage } from "./Emergency/EmergencyPage";
+export { default as MechanicFeedbackPage } from "./Feedback/FeedbackPage";
+export { default as MechanicComplaintsPage } from "./Complaints/ComplaintsPage";
+export { default as MechanicNotificationsPage } from "./Notifications/NotificationsPage";
+export { default as MechanicProfilePage } from "./Profile/ProfilePage";
+export { default as MechanicAddVehiclePage } from "./AddVehicle/AddVehiclePage";
+export { default as MechanicAddServiceRecordPage } from "./AddServices/AddServiceRecordPage";

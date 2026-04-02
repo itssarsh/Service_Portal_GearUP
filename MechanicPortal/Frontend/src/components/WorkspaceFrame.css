@@ -1,0 +1,475 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap");
+
+.workspace-frame {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(280px, 320px) minmax(0, 1fr);
+  gap: 20px;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.workspace-frame__sidebar,
+.workspace-frame__topbar {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: var(--theme-shadow-strong);
+  backdrop-filter: blur(24px);
+}
+
+.workspace-frame__sidebar {
+  position: sticky;
+  top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  align-self: start;
+  min-height: calc(100vh - 40px);
+  padding: 24px;
+  border-radius: 32px;
+  background:
+    radial-gradient(circle at top right, rgba(255, 176, 86, 0.18), transparent 28%),
+    radial-gradient(circle at bottom left, rgba(80, 127, 185, 0.18), transparent 32%),
+    linear-gradient(180deg, rgba(7, 16, 26, 0.96), rgba(15, 28, 43, 0.94));
+  color: rgba(245, 247, 250, 0.94);
+}
+
+.workspace-frame__brand,
+.workspace-frame__nav-link,
+.workspace-frame__actions,
+.workspace-frame__user-card {
+  display: flex;
+  align-items: center;
+}
+
+.workspace-frame__brand {
+  gap: 14px;
+}
+
+.workspace-frame__brand-mark,
+.workspace-frame__user-avatar {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #d38a3a 0%, #f0bf65 100%);
+  color: #101723;
+  box-shadow: 0 20px 35px rgba(209, 138, 58, 0.24);
+}
+
+.workspace-frame__brand-mark {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.workspace-frame__brand strong,
+.workspace-frame__story h2,
+.workspace-frame__headline h1,
+.workspace-frame__date-card strong,
+.workspace-frame__user-card strong,
+.workspace-frame__status-card strong {
+  font-family: "Space Grotesk", "Plus Jakarta Sans", sans-serif;
+}
+
+.workspace-frame__brand strong,
+.workspace-frame__brand span {
+  display: block;
+}
+
+.workspace-frame__brand strong {
+  font-size: 1.05rem;
+}
+
+.workspace-frame__brand span {
+  margin-top: 3px;
+  color: rgba(226, 232, 240, 0.62);
+  font-size: 0.83rem;
+}
+
+.workspace-frame__story {
+  padding: 22px;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.workspace-frame__story-badge,
+.workspace-frame__nav-label,
+.workspace-frame__headline span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.workspace-frame__story-badge {
+  background: rgba(211, 138, 58, 0.14);
+  color: #f7bd72;
+}
+
+.workspace-frame__story h2 {
+  margin: 16px 0 10px;
+  font-size: 1.55rem;
+  line-height: 1.08;
+  letter-spacing: -0.04em;
+}
+
+.workspace-frame__story p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.72);
+  line-height: 1.7;
+}
+
+.workspace-frame__nav {
+  display: grid;
+  gap: 18px;
+}
+
+.workspace-frame__nav-group {
+  display: grid;
+  gap: 12px;
+}
+
+.workspace-frame__nav-label {
+  width: fit-content;
+  padding: 0;
+  background: transparent;
+  color: rgba(226, 232, 240, 0.54);
+}
+
+.workspace-frame__nav-items {
+  display: grid;
+  gap: 10px;
+}
+
+.workspace-frame__nav-link {
+  gap: 12px;
+  min-height: 54px;
+  padding: 0 16px;
+  border-radius: 18px;
+  color: rgba(244, 247, 251, 0.86);
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workspace-frame__nav-link:hover {
+  transform: translateX(3px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.workspace-frame__nav-link--active {
+  background: linear-gradient(135deg, rgba(211, 138, 58, 0.2), rgba(56, 95, 145, 0.18));
+  border-color: rgba(211, 138, 58, 0.28);
+  box-shadow: 0 16px 30px rgba(4, 12, 22, 0.24);
+}
+
+.workspace-frame__nav-link--danger.workspace-frame__nav-link--active {
+  background: linear-gradient(135deg, rgba(225, 93, 70, 0.22), rgba(255, 132, 95, 0.14));
+  border-color: rgba(239, 100, 72, 0.28);
+}
+
+.workspace-frame__nav-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.workspace-frame__sidebar-footer {
+  margin-top: auto;
+  display: grid;
+  gap: 12px;
+}
+
+.workspace-frame__status-card {
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.workspace-frame__status-card span,
+.workspace-frame__status-card strong,
+.workspace-frame__date-card span,
+.workspace-frame__date-card strong,
+.workspace-frame__user-card span,
+.workspace-frame__user-card strong {
+  display: block;
+}
+
+.workspace-frame__status-card span,
+.workspace-frame__date-card span,
+.workspace-frame__user-card span {
+  color: rgba(226, 232, 240, 0.58);
+  font-size: 0.84rem;
+}
+
+.workspace-frame__status-card strong {
+  margin-top: 6px;
+  font-size: 0.98rem;
+  line-height: 1.45;
+}
+
+.workspace-frame__main {
+  min-width: 0;
+}
+
+.workspace-frame__topbar {
+  position: sticky;
+  top: 20px;
+  z-index: 10;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 18px;
+  margin-bottom: 20px;
+  padding: 24px 28px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgba(212, 138, 57, 0.12), transparent 24%),
+    linear-gradient(180deg, rgba(10, 18, 29, 0.92), rgba(14, 26, 39, 0.9));
+}
+
+.workspace-frame__headline {
+  min-width: 0;
+}
+
+.workspace-frame__headline span {
+  background: rgba(211, 138, 58, 0.12);
+  color: #e9b06f;
+}
+
+.workspace-frame__headline h1 {
+  margin: 14px 0 10px;
+  color: #f8fafc;
+  font-size: clamp(1.8rem, 2.8vw, 2.85rem);
+  letter-spacing: -0.05em;
+}
+
+.workspace-frame__headline p {
+  max-width: 760px;
+  margin: 0;
+  color: rgba(226, 232, 240, 0.74);
+  line-height: 1.7;
+}
+
+.workspace-frame__actions {
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.workspace-frame__date-card,
+.workspace-frame__user-card {
+  min-height: 60px;
+  padding: 0 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.workspace-frame__date-card strong,
+.workspace-frame__user-card strong {
+  margin-top: 4px;
+  color: #f8fafc;
+  font-size: 0.98rem;
+}
+
+.workspace-frame__user-card {
+  gap: 12px;
+}
+
+.workspace-frame__user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
+.workspace-frame__logout {
+  min-height: 60px;
+  padding: 0 18px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+  color: #f8fafc;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.workspace-frame__logout:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.workspace-frame__route {
+  min-width: 0;
+}
+
+.workspace-frame__route > section {
+  min-height: 0;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 34px;
+  overflow: clip;
+  box-shadow: var(--theme-shadow-strong);
+}
+
+.workspace-frame__modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background:
+    radial-gradient(circle at top, rgba(211, 138, 58, 0.16), transparent 26%),
+    rgba(8, 16, 27, 0.56);
+  backdrop-filter: blur(12px);
+}
+
+.workspace-frame__modal {
+  width: min(460px, 100%);
+  padding: 28px;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background:
+    radial-gradient(circle at top right, rgba(255, 220, 180, 0.3), transparent 30%),
+    linear-gradient(180deg, rgba(15, 26, 40, 0.98), rgba(10, 18, 29, 0.96));
+  box-shadow: 0 34px 80px rgba(4, 10, 18, 0.42);
+  color: #f8fafc;
+}
+
+.workspace-frame__modal-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(211, 138, 58, 0.14);
+  color: #f2bf7b;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.workspace-frame__modal h2 {
+  margin: 16px 0 10px;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  letter-spacing: -0.04em;
+}
+
+.workspace-frame__modal p {
+  margin: 0;
+  color: rgba(226, 232, 240, 0.78);
+  line-height: 1.7;
+}
+
+.workspace-frame__modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.workspace-frame__modal-button {
+  min-height: 50px;
+  padding: 0 18px;
+  border-radius: 16px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.workspace-frame__modal-button:hover {
+  transform: translateY(-1px);
+}
+
+.workspace-frame__modal-button--secondary {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #f8fafc;
+}
+
+.workspace-frame__modal-button--primary {
+  border: 0;
+  background: linear-gradient(135deg, #b54d36 0%, #e17b4d 100%);
+  color: #ffffff;
+  box-shadow: 0 18px 34px rgba(181, 77, 54, 0.24);
+}
+
+@media (max-width: 1180px) {
+  .workspace-frame {
+    grid-template-columns: 1fr;
+  }
+
+  .workspace-frame__sidebar {
+    position: relative;
+    top: 0;
+    min-height: auto;
+  }
+
+  .workspace-frame__topbar {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 780px) {
+  .workspace-frame {
+    gap: 16px;
+    padding: 14px;
+  }
+
+  .workspace-frame__sidebar,
+  .workspace-frame__topbar,
+  .workspace-frame__route > section {
+    border-radius: 24px;
+  }
+
+  .workspace-frame__topbar,
+  .workspace-frame__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .workspace-frame__date-card,
+  .workspace-frame__user-card,
+  .workspace-frame__logout {
+    width: 100%;
+  }
+
+  .workspace-frame__modal {
+    padding: 22px;
+    border-radius: 22px;
+  }
+
+  .workspace-frame__modal-actions {
+    flex-direction: column-reverse;
+  }
+
+  .workspace-frame__modal-button {
+    width: 100%;
+  }
+}

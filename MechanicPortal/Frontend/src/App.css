@@ -1,0 +1,97 @@
+.app-shell {
+  min-height: 100vh;
+  color: var(--theme-navy);
+  width: 100%;
+  overflow-x: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(211, 138, 58, 0.1), transparent 20%),
+    radial-gradient(circle at 100% 0%, rgba(72, 120, 180, 0.12), transparent 24%),
+    var(--theme-page-background);
+}
+
+.mechanic-alert-pill {
+  position: fixed;
+  right: 24px;
+  bottom: 96px;
+  z-index: 35;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  max-width: min(360px, calc(100vw - 32px));
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(8, 18, 30, 0.97), rgba(20, 41, 64, 0.94));
+  color: #ffffff;
+  text-decoration: none;
+  box-shadow: 0 22px 48px rgba(5, 14, 25, 0.28);
+}
+
+.mechanic-alert-pill__label {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.mechanic-alert-pill__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 30px;
+  height: 30px;
+  padding: 0 8px;
+  border-radius: 999px;
+  background: rgba(211, 138, 58, 0.18);
+  font-weight: 800;
+}
+
+.emergency-alert-pill {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 40;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #8f1f28, #d64a3e);
+  color: #fff7ed;
+  text-decoration: none;
+  box-shadow: 0 18px 40px rgba(95, 19, 26, 0.3);
+}
+
+.emergency-alert-pill__label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.emergency-alert-pill__count {
+  min-width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(255, 247, 237, 0.2);
+  font-size: 0.85rem;
+  font-weight: 800;
+}
+
+@media (max-width: 640px) {
+  .mechanic-alert-pill {
+    right: 16px;
+    left: 16px;
+    bottom: 88px;
+    max-width: none;
+  }
+
+  .emergency-alert-pill {
+    right: 16px;
+    bottom: 16px;
+    left: 16px;
+    justify-content: space-between;
+  }
+}
